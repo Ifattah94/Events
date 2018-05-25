@@ -65,6 +65,15 @@
     return archived;
 }
 
+-(void)removeEvent:(NSNumber *)index {
+    NSMutableArray *mutableEvents = [NSMutableArray arrayWithArray:_events];
+    int intIndex = [index intValue];
+    [mutableEvents removeObjectAtIndex:intIndex];
+    _events = mutableEvents;
+    
+}
+
+
 
 
 

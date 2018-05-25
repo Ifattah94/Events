@@ -28,7 +28,7 @@
     self.tableView.dataSource = self;
     self.tableView.delegate = self;
     [self.tableView registerClass:FavoriteCell.class forCellReuseIdentifier:@"FavoriteCell"];
-    _events = PersistenceHelper.shared.retrieveSavedEvents;
+    _events = PersistenceHelper.shared.getFavoriteEvents;
     
    
     
@@ -58,6 +58,7 @@
     
     [self.navigationController pushViewController:detailVC animated:YES];
 }
+
 
 
 
